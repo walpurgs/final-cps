@@ -1,0 +1,27 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media screen and (min-height:798px) {
+    .menu {
+      gap: 8px;
+    }
+  }
+  .menu__button-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 25px;
+  }
+  .menu__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 4%;
+  }
+  .menu__tel {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }

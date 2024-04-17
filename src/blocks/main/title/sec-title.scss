@@ -1,0 +1,30 @@
+.sec-title {
+    @include flex-sb-c(0);
+    padding: 3vw 4vw 1.5vw;
+
+    &__title {
+        font-weight:bold;
+        font-size: $text-main;
+        position: relative;
+    };
+    &__title::before {
+        content: '';
+        border-radius: 2px;
+        background: $el-aquamarin-main;
+        width: 3px;
+        height: 40px;
+        position: absolute;
+        left:-4vw;
+    };
+
+    &__btn-grup {
+        @include flex-fe-c(32px);
+
+        @media screen and (max-width: $screen-lg) {
+            @include hide;
+        };
+    };
+    &__btn {
+        @include flex-fe-c(8px);
+    };
+};

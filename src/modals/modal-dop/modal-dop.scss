@@ -1,0 +1,39 @@
+.modal-dop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 999999;
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        overflow: scroll;
+            -ms-overflow-width: none;
+            &::-webkit-scrollbar,
+            .scrollbar-non::-webkit-scrollbar {
+                display: none;
+            }
+
+        &__box {
+            margin: 25vh auto;
+            border-radius: 18px;
+            height: 150px;
+            width: 300px;          
+            background-color: $bg-white;
+            @include flex-fs-col(12px);
+            justify-content: space-around;
+            padding: 30px;
+            box-shadow: (0 0 52px 0 rgba(0, 0, 0, 0.2));
+    }
+}
+
+.dop {   
+    &__btn {
+        justify-content: center;
+    }
+    &__title {
+        font-weight: 500;
+        text-align: center;
+    }
+}

@@ -1,0 +1,14 @@
+.menu-header {
+    width: 320px;
+    @media screen and (max-width:360px) {
+        width:100%;
+    };
+    @include flex-sb-c(0);
+    padding: 30px 22px;
+}
+
+.menu__btn--hide {
+    @media screen and (min-width:$screen-lg) {
+        @include hide;
+    }
+}

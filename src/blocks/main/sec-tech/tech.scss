@@ -1,0 +1,68 @@
+.sec-tech {
+    position: relative;
+    margin-bottom: 28px;
+};
+
+.technic {
+  padding: 0 3vw 15px;
+
+    &__list {
+      @media screen and (max-width: $screen-sm) {
+        margin-left: 3vw;
+      };
+      @media screen and (min-width: $screen-sm) {
+        display: flex;
+            flex-wrap: wrap;
+            row-gap: 16px;
+            padding: 16px 0;
+            margin-bottom: 0;
+            max-height: 160px;
+            overflow: hidden;
+      };
+    };
+    &__item {
+        border: 1px solid $g-lightgray;
+        border-radius: 6px;
+        background: $bg-white;
+        padding: 16px;
+        @include flex-sb-c(0);
+        margin-bottom: 20px;
+        width: 240px;
+        height: 160px;
+        cursor: pointer;
+
+        @media screen and (min-width: $screen-sm) {
+          margin: 0;
+          max-width: 224px;
+          margin-right: 2vw;
+        };
+    };
+
+    &__text {
+        font-weight: 500;
+        align-self: flex-start;
+    };
+    &__btn-img {
+        opacity: 85%;
+        align-self: flex-end;
+    };
+
+    &__btn {
+        padding-left: 10px;
+        transition: 150ms ease-in;
+        @include flex-sb-c(10px);
+    };
+    &__btn-show-more {
+      @media screen and (max-width:$screen-sm) {
+        @include hide;
+      };
+      @media screen and (min-width: 1639px) {
+        @include hide;
+      };
+    };
+    .fade {
+      @media (max-width: $screen-sm) {
+        @include fade(190px);
+    };
+    }
+};

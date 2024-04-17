@@ -1,0 +1,23 @@
+.main {
+    background-color: $bg-gray;
+
+    @media screen and (min-width: $screen-lg) {
+        @include flex-fs-col(0);
+        align-items: flex-start;
+        // flex-direction: row;
+        flex-wrap: nowrap;
+    };
+};
+
+.sections {
+    @include flex-fs-col(0);
+};
+
+
+
+@import './title/sec-title.scss';
+@import './navigate/navigate.scss';
+@import './sec-info/sec-info.scss';
+@import './sec-brand/brand.scss';
+@import './sec-tech/tech.scss';
+@import './sec-price/price.scss';

@@ -1,0 +1,149 @@
+.show-more__img {
+    animation: up 600ms ease-in-out alternate infinite;
+};
+
+.show-more:hover .show-more__img {
+    animation-duration: 300ms;
+}
+
+@keyframes up {
+    0% {
+        translate: (0);
+    };
+    100% {
+        translate: (0 3px);
+    };
+};
+
+
+
+.accent {
+    transform-origin: center;
+    animation: accent 1000ms ease-in-out alternate infinite;
+};
+
+@keyframes accent {
+    0% {
+        transform: rotate(0deg);
+    };
+    20% {
+        transform: rotate(20deg);
+    };
+    40% {
+        transform: rotate(0deg);
+    };
+    100% {
+        transform: rotate(0);
+    };
+};
+
+// brand
+
+.brand__item:hover, .technic__item:hover {
+        box-shadow: inset 1px 1px 3px #41f6d836,
+                    inset -1px -1px 3px #ff3e7834;
+    };
+
+.brand__item:hover .brand__btn-img,
+.technic__item:hover .technic__btn-img,
+.price-footer__btn:hover .price-footer__btn-img,
+.price__btn:hover .price__btn-img  {
+    animation: showMoreAnimate 600ms infinite alternate linear;
+    opacity: 100%;
+  }
+  
+  @keyframes showMoreAnimate {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(3px);
+    }
+  }
+  
+  .brand:hover .brand__btn {
+    opacity: 100%;
+  }
+
+// price
+
+.btn-submit use {
+    animation: priceAnimate 600ms infinite alternate linear;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 0 5px $pink;
+  }
+  .btn-submit:hover use {
+    animation: priceAnimate 200ms infinite alternate linear;
+  }
+
+  @keyframes priceAnimate {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(3px);
+    }
+  }
+
+ .icon:hover {
+  filter: drop-shadow(0 0 5px $pink);
+}
+
+
+@media screen and (max-width: $screen-lg) {
+  .menu {
+    transition: 200ms ease-in-out;
+    &__box {
+      transition: 400ms ease-in-out;
+      translate: 0;
+    }
+  }
+  
+  .menu.open {
+    visibility: visible;
+    opacity: 100%;
+    & .modal__box {
+      translate: 320px;
+    }
+  }
+}
+
+.feedback, .call {
+  transition: 200ms ease-in-out;
+  &__box {
+    transition: 400ms ease-in-out;
+    translate: 0;
+  }
+}
+
+.feedback.open, .call.open {
+  visibility: visible;
+  opacity: 100%;
+  & .modal__box {
+    translate: 440px;
+  }
+}
+
+
+.modal-dop {
+  transition: 200ms ease-in-out;
+  &__box {
+    transition: 400ms ease-in-out;
+    scale: 0;
+  }
+}
+
+.modal-dop.open {
+  visibility: visible;
+  opacity: 100%;
+  & .modal-dop__box {
+    scale: 1;
+  }
+}
+
+.feedback__input:focus,
+.call__input:focus {
+  border: 1px solid $el-aquamarin-main;
+}

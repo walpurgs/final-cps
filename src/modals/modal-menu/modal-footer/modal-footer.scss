@@ -1,0 +1,32 @@
+.menu-footer {
+    padding-left: 24px;
+    @include flex-fs-col(12px);
+    margin-top: 10vh;
+    margin-bottom: 20px;
+
+    &__btn-grup {
+        display: flex;
+        gap: 16px;
+        margin-top: 25px;
+    };
+
+    &__info {
+        @include flex-fs-col(0);
+    };
+
+    &__tel {
+        font-size: 24px;
+        font-weight: 700;
+    };
+
+    &__lang {
+        display: flex;
+        gap:10px;
+    };
+
+    &__lang-btn:hover, &__lang-btn:focus {
+        color: $text-gray;
+    };
+
+  }
+

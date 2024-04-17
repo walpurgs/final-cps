@@ -1,0 +1,43 @@
+.header {
+    // style
+    width: 100%;
+    background-color: $bg-white;
+    box-shadow: 0px 1px 1px $el-aquamarin;
+    opacity: 99.99%;
+
+    // location
+    @include flex-sb-c(4vw);
+    padding: 2vw 4vw;
+
+    &__left { 
+        @include flex-fs-c(2vw);
+    };
+
+    &__right {
+        @include flex-fs-c(2.5vw);
+
+        &--one,
+        &--two {
+            @include flex-fs-c(2vw);
+        };
+
+        &--one {
+            @media screen and (max-width: $screen-sm) {
+                @include hide;
+            }
+        }
+    };
+    
+    &__btn {
+        align-self: center;
+        line-height: 0;
+    };
+    &__btn:hover {
+        filter: drop-shadow(0 0 1px $pink);
+    };
+
+    @media screen and (min-width: $screen-lg) {
+        @include hide;
+    }
+}
+
